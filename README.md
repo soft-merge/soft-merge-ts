@@ -1,0 +1,2 @@
+# Soft Merge for TypeScript
+
