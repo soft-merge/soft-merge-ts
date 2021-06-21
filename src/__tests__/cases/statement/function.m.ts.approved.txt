@@ -1,0 +1,11 @@
+function a (x: number, y: number): number {
+  return x + y
+}
++++ (2)
+function a (x: number, y: number): number {
+  return x * y
+}
+===
+function a(x: number, y: number): number {
+    return __if("2") ? x * y : x + y;
+}

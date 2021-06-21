@@ -1,0 +1,50 @@
+var numS = 3, numD = 4;
+var arrS = [2, 4], arrP = [2, 4], arrD = [];
+/*
+var arrPartly = [2, 4];
+var arrDifferent = [2, 4];
+var unary = -x;
+var ternary = x ? 3 : 1;
+var comma = (2, x = 3);
+var index = a[5];
+var callSame = a(5);
+var callPartly = a(5);
+var callDifferent = a(5);
+var binary = x * 3;
+var binaryPartly = x * 3;
+var binaryDifferent = x + 3;
+*/
++++ (2)
+var numS = 3, numD = 9;
+var arrS = [2, 4], arrP = [2, 6], arrD = [3];
+/*
+var arrPartly = [2, 4];
+var arrDifferent = [2, 4];
+var unary = -x;
+var ternary = x ? 3 : 1;
+var comma = (2, x = 3);
+var index = a[5];
+var callSame = a(5);
+var callPartly = a(5);
+var callDifferent = a(5);
+var binary = x * 3;
+var binaryPartly = x * 3;
+var binaryDifferent = x + 3;
+*/
+===
+var numS = 3, numD = __if("2") ? 9 : 4;
+var arrS = [2, 4], arrP = __if("2") ? [2, 6] : [2, 4], arrD = __if("2") ? [3] : [];
+/*
+var arrPartly = [2, 4];
+var arrDifferent = [2, 4];
+var unary = -x;
+var ternary = x ? 3 : 1;
+var comma = (2, x = 3);
+var index = a[5];
+var callSame = a(5);
+var callPartly = a(5);
+var callDifferent = a(5);
+var binary = x * 3;
+var binaryPartly = x * 3;
+var binaryDifferent = x + 3;
+*/ 

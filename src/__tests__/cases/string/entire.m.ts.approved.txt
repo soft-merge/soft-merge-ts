@@ -1,0 +1,5 @@
+'Hello World!'
++++ (2)
+'Hi all!'
+===
+__if("2") ? "Hi all!" : "Hello World!";

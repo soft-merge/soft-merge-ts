@@ -1,0 +1,3 @@
+if (a) {
+  throw new Error('uhh')
+}

@@ -1,0 +1,37 @@
+#!/bin/sh
+
+cd $(dirname $0)/..
+
+if ! [ $DIFF ]; then
+  DIFF="code --diff"
+fi
+if ! [ $EDITOR ]; then
+  EDITOR="code"
+fi
+FILES=$(find src -name '*.received.txt')
+
+N=$(echo $FILES | wc -w)
+
+if [ $N = 0 ]; then
+  echo All tests are approved.
+  exit 0
+fi
+
+echo $N tests need approval.
+echo
+
+for RECEIVED in $FILES; do
+  echo $RECEIVED
+  APPROVED=$(echo $RECEIVED | sed 's/\.received\.txt$/\.approved\.txt/')
+  if [ -f "$APPROVED" ]; then
+    $DIFF $APPROVED $RECEIVED
+  else
+    $EDITOR $RECEIVED
+  fi
+  echo -n "What do you think? ENTER = approve, n = next "
+  read A
+  if ! [ "$A" ]; then
+    echo Approving
+    mv -f $RECEIVED $APPROVED
+  fi
+done

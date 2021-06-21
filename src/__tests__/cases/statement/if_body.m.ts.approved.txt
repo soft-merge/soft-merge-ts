@@ -1,0 +1,14 @@
+if (a) {
+  console.log('hi')
+}
++++ (2)
+if (a) {
+  throw new Error('uhh')
+}
+===
+if (a) {
+    if (__if("2"))
+        throw new Error("uhh");
+    else
+        console.log("hi");
+}
